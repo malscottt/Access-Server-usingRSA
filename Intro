@@ -1,6 +1,0 @@
-In this project, I will show you how to generate private key and public key AND how to apply it in our server.
-
-Before we start, we need 2 essential tools:
-
-- Rocky Linux ( Can be installed by search in on Google and run it in VMware Workstation )
-- PuTTY ( make sure to install the latest version or this project might not work )
