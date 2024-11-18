@@ -23,6 +23,7 @@ The server will store public key so when it matches with client's private key, t
 
 
 **Secure Access:**
+
 The server validates the client request and grants/denies access based on encrypted credentials.
 
 
