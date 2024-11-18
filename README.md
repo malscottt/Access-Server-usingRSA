@@ -27,3 +27,10 @@ The server will store public key so when it matches with client's private key, t
 The server validates the client request and grants/denies access based on encrypted credentials.
 
 
+
+Before we start, we need 2 essential tools which is:
+
+- Rocky Linux or any preferred UNIX platform
+- PuTTY for remote access
+
+
