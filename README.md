@@ -29,6 +29,7 @@ The server validates the client request and grants/denies access based on encryp
 Before we start, we need 2 essential tools which is:
 
 **- Rocky Linux or any preferred UNIX platform**
+
 **- PuTTY for remote access**
 
 When these tools is already installed, now we can start with our project.
