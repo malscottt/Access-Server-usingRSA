@@ -31,6 +31,8 @@ Before we start, we need 2 essential tools which is:
 
   - Rocky Linux or any preferred UNIX platform
 
+  - VMware Workstation to activate Unix platform
+
   - PuTTY for remote access
 
   - OpenSSL for generating private key and public key
