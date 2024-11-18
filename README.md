@@ -34,3 +34,4 @@ Before we start, we need 2 essential tools which is:
 - PuTTY for remote access
 
 
+`sqlmap -r post-request.txt -p user_id --dbs`
