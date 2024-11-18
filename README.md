@@ -6,8 +6,6 @@ This project demonstrates a secure access server implementation utilizing the RS
 **How It Works?**
 
 
-**Key Generation:**
-
 A public-private key pair is generated.
 The private key is shared with clients, while the public key is securely stored on the server.
 
@@ -30,8 +28,7 @@ The server validates the client request and grants/denies access based on encryp
 
 Before we start, we need 2 essential tools which is:
 
-**- Rocky Linux or any preferred UNIX platform
-- PuTTY for remote access
-**
+**- Rocky Linux or any preferred UNIX platform**
+**- PuTTY for remote access**
 
 When these tools is already installed, now we can start with our project.
