@@ -35,7 +35,7 @@ Before we start, we need 2 essential tools which is:
 
   - PuTTY for remote access
 
-  - OpenSSL for generating private key and public key
+  - PuTTYgen to save the private key
 
 
 When these tools is already installed, now we can start with our project.
