@@ -1,6 +1,5 @@
 # Access-Server-usingRSA
 
-**Access Server Using RSA**
 This project demonstrates a secure access server implementation utilizing the RSA encryption algorithm. RSA is a widely used asymmetric encryption method that employs a pair of cryptographic keys: a public key for encryption and a private key for decryption.
 
 **Key Features:**
