@@ -11,8 +11,9 @@ So, when we want to access the server by using remote connection, we will use a 
 
 By default, the SSH port number is `port 22` but we want to change that port to anything we want. In this case, I want to make `port 8888` as my SSH port. So, we must configure `sshd_config` file to customize it.
 
-
--  **`vim /etc/ssh/sshd_config`**
+```sh
+vim /etc/ssh/sshd_config
+```
 
 ![image](https://github.com/user-attachments/assets/63d3159f-b452-4fef-ac29-794dec712e0f)
 
