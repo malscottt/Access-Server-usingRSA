@@ -4,13 +4,13 @@
 
 <figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
-* wappalyzer
+* **wappalyzer**
 
 <figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-from this info, we know that this webapp is using Python 3.8.15 and Flask 2.0.0 as their framework.
+from this info, we know that this webapp is using **`Python 3.8.15`** and **`Flask 2.0.0`** as their framework.
 
-* page source
+* **page source**
 
 ```html
 <html>
@@ -222,7 +222,7 @@ from this info, we know that this webapp is using Python 3.8.15 and Flask 2.0.0 
 </html>
 ```
 
-* main.py
+* **main.py**
 
 ```python
 from flask import Flask, jsonify
@@ -251,11 +251,11 @@ def bad_request(error):
 
 ```
 
-from this code, this web app is using Mako as a templating engine. from my observation, this challenge is quietly a SSTI (Server-Side Template Injection) which is we will inject a malicious code on the server.&#x20;
+from this code, this web app is using **Mako** as a templating engine. from my observation, this challenge is quietly a **SSTI (Server-Side Template Injection)** which is we will inject a malicious code on the server.&#x20;
 
 
 
-* util.py
+* **util.py**
 
 ```python
 from mako.template import Template
@@ -574,7 +574,7 @@ this is for the font. when we entered any words, it will change the font.
 
 <figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
-* routes.py
+* **routes.py**
 
 ```python
 from flask import Blueprint, request
@@ -603,7 +603,7 @@ ${7*7}
 
 its now confirmed that this web is vulnerable to SSTI which means the templating engine (Mako) is vulnerable because of its response.
 
-i already tried the payload from [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md#mako) but the thing is, most of the payload will returned null or Internal Server Error.&#x20;
+i already tried the payload from [**PayloadAllTheThings**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md#mako) but the thing is, most of the payload will returned null or Internal Server Error.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
