@@ -8,6 +8,7 @@
 * [Hack The Box](ctf-writeups/hack-the-box/README.md)
   * [As-Rep Roasting](ctf-writeups/hack-the-box/as-rep-roasting.md)
   * [Flag Command (very easy)](ctf-writeups/hack-the-box/flag-command-very-easy.md)
+  * [Spookifier](ctf-writeups/hack-the-box/spookifier.md)
 * [Blue Team Labs Online](ctf-writeups/blue-team-labs-online/README.md)
   * [Secure Shell](ctf-writeups/blue-team-labs-online/secure-shell.md)
 

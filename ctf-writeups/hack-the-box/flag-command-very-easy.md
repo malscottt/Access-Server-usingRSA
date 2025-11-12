@@ -90,7 +90,14 @@ we paste the secret word to the game to print the flag.
 &#x20;**`HTB{D3v3l0p3r_t00l5_4r3_b35t__t0015_wh4t_d0_y0u_Th1nk??}`**
 
 {% hint style="danger" %}
-this is known as **Broken Access Control** caused by **Sensitive Information Exposure** and **Client-Side Enforcement of Security**. in this challenge, the server should never send a secret or confidential information to the client which is in `/api/options`.
+The core vulnerability in this challenge is **Broken Access Control**. This flaw allows any user to bypass the intended game progression and capture the flag by submitting a hidden **`secret`** command.
+
+This critical issue stems from two related root causes:
+
+1. Sensitive Information Exposure: The server improperly exposes all game logic, including the hidden **`secret`** commands, via the **`/api/options`** JSON path. This file acts as a cheat sheet, sending confidential data directly to the client's browser.
+2. Client-Side Enforcement of Security: Instead of validating commands on the server, the application relies on client-side JavaScript (**`main.js`**). The code explicitly checks if a user's input is in the **`availableOptions['secret']`** list, effectively creating a bypass that is visible to anyone who can read the source code.
+
+The server should never have sent the secret commands to the client. By doing so, it provided all the information necessary to bypass the client-side security check.
 {% endhint %}
 
 
